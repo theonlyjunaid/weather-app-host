@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.btn-primary {
+    @apply bg-accent text-dark inline-flex items-center border-0 py-2 px-4 md:py-2 md:px-6 focus:outline-none rounded text-base mt-4 md:mt-0 hover:shadow-accent;
+}
+
+.btn-secondary {
+    @apply bg-transparent text-accent inline-flex items-center border-[1px] border-accent py-2 px-4 md:py-2 md:px-6 focus:outline-none rounded text-base mt-4 md:mt-0 hover:shadow-accent;
+}
+
+.bg-glass-dark {
+    background: rgba(80, 80, 80, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(80, 80, 80, 0.62);
+}
+
+.bg-glass-accent {
+    background: rgba(113, 229, 251, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.1px);
+    -webkit-backdrop-filter: blur(10.1px);
+    border: 1px solid rgba(113, 229, 251, 0.57);
+}
+
+* {
+    box-sizing: border-box;
+}

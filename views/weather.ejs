@@ -1,0 +1,76 @@
+<%- include('partials/header') %>
+
+
+    <section class="flex items-center justify-center sm:min-h-[60vh] md:min-h-[85vh] text-light">
+
+        <div class="flex flex-col justify-center items-center px-12 py-7 sm:rounded-2xl bg-glass-accent">
+
+            <div class="mb-5">
+                <h2 class="text-2xl sm:text-4xl font-special">
+                    <%= weather.city %> , <%= weather.country %>
+                </h2>
+            </div>
+            <div class=" mb-5">
+                <div class="flex flex-col md:flex-row items-center justify-around">
+                    <div class="flex items-center justify-center">
+                        <img src="<%= weather.iconURL %>" class="w-20 invert" alt="">
+                    </div>
+
+                    <div class="flex flex-col items-center justify-evenly mb-5 md:mb-0 md:ml-7">
+                        <h2 class=" text-5xl sm:text-7xl text-accent text-center">
+                            <%= weather.desc %>
+                        </h2>
+                    </div>
+                    <div class="flex ml-5">
+                        <div class="flex flex-col items-start md:items-end text-lg">
+                            <span>Temperature</span>
+                            <span>Feels Like</span>
+                            <span>Humidity</span>
+                            <span>Pressure</span>
+                            <span>Wind</span>
+                        </div>
+                        <div class="flex flex-col justify-center items-center ml-3 text-lg">
+                            <span>:</span>
+                            <span>:</span>
+                            <span>:</span>
+                            <span>:</span>
+                            <span>:</span>
+                        </div>
+                        <div class="flex flex-col items-end md:items-start ml-3 font-bold text-lg">
+                            <span>
+                                <%= weather.temp %> °C
+                            </span>
+                            <span>
+                                <%= weather.feels_like %> °C
+                            </span>
+                            <span>
+                                <%= weather.humidity %>%
+                            </span>
+                            <span>
+                                <%= weather.pressure %> hPa
+                            </span>
+                            <span>
+                                <%= weather.wind.speed %> kmph
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:text-xl flex justify-around w-full md:w-4/5 text-accent font-bold">
+                <div class="flex items-center justify-center"> <img src="img/sunrise.png" alt="Sunrise" title="Sunrise"
+                        class="mr-2 w-10 inline invert">
+                    <%= weather.sunrise %>
+                </div>
+                <div class="mr-4 flex items-center justify-center"><img src="img/sunset.png" alt="Sunset" title="Sunset"
+                        class=" mr-2 w-10 inline invert">
+                    <%= weather.sunset %>
+                </div>
+            </div>
+            <div class="mt-5 flex items-center justify-center">
+                <a href="/check">
+                    <button class="btn-primary">Check Another</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/footer') %>

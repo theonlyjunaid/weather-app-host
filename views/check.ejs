@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+    <section class="min-h-[10vh] md:min-h-[85vh] flex justify-center items-center">
+        <div class="container mx-auto flex flex-wrap items-center justify-center">
+            <form action="/check" method="post"
+                class="lg:w-2/6 md:w-1/2 p-8 flex flex-col w-5/6 mt-10 md:mt-0 bg-glass-dark rounded-2xl">
+                <h2 class="text-accent text-xl md:text-3xl font-special text-center font-medium title-font mb-5">Check
+                    Weather
+                </h2>
+                <div class="relative mb-4">
+                    <input type="text" id="full-name" name="city"
+                        class="text-light w-full border-b-2 border-b-gray-300 focus:border-b-accent text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out bg-inherit focus:placeholder:text-accent placeholder:text-gray-500"
+                        placeholder="Name of the City" autocomplete="off">
+                </div>
+                <button type="submit" class="btn-primary justify-center text-center text-lg">Click to Load
+                    Weather</button>
+                <p class="text-xs text-gray-500 mt-3">It will provide current Weather of the place specified.</p>
+            </form>
+        </div>
+    </section>
+
+
+
+    <%- include('partials/footer') %>
