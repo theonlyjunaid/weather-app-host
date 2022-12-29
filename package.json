@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind:css": "postcss public/styles/main.css -o public/styles/style.css",
-    "start" : "node index.js"
+    "build": "postcss public/styles/main.css -o public/styles/style.css",
+    "start" : "node app.js"
   },
   "author": "",
   "license": "ISC",
